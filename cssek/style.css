@@ -45,7 +45,12 @@ nav {
 }
 
 article div {
-  padding: 14px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+article div img {
+  margin: auto;
 }
 .nevek {
   text-align: center;
@@ -54,6 +59,7 @@ article div {
   font-size: 30px;
 }
 .megnezem {
+  margin: auto;
   color: white;
   font-weight: bold;
   background: rgb(0, 111, 4);
@@ -169,8 +175,20 @@ ul {
   float: right;
   margin: 5px;
 }
+@media (max-width: 870px) {
+  article {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 @media (max-width: 700px) {
+  main {
+    width: 80%;
+    margin: auto;
+  }
+  article div {
+    padding: 14px;
+  }
   article {
     display: block;
     display: grid;
@@ -207,6 +225,63 @@ ul {
 }
 
 @media (max-width: 400px) {
+  main {
+    width: 80%;
+    margin: auto;
+  }
+  .balkep {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .jobbkep {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  article {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 5px;
+  }
+  nav {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+  nav a {
+    width: 100%;
+  }
+  .kezdolap {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .elso {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .masodik {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .harmadik {
+    grid-row: 4;
+    grid-column: 1;
+  }
+}
+@media (max-width: 390px) {
+  .jobbkep {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 100px;
+  }
+  main {
+    width: 80%;
+    margin: auto;
+  }
+
   article {
     display: grid;
     grid-gap: 10px;
